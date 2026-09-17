@@ -3,151 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Juan Carlos Tuesta Llaja - NLP & LLM Researcher specializing in interpretability, robustness auditing, and syntactic control of Transformer models.">
-  <title>Juan Carlos Tuesta Llaja | NLP & LLM Researcher</title>
+  <title>Juan Carlos Tuesta Llaja</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero">
-    <div class="hero-content">
-      <div class="status-badge">Available for NLP / LLM Research Roles</div>
-      <h1>Juan Carlos Tuesta Llaja</h1>
-      <p class="subtitle">NLP Researcher | M.Sc. in Applied Mathematics & CS (MIPT)</p>
-      <p class="bio">
-        Specializing in <strong>model interpretability</strong>, <strong>behavioral auditing</strong>, and <strong>syntactic control</strong> of Transformer-based language models. Author of the AESOP-RU framework for causal disruption analysis across autoregressive and masked architectures.
-      </p>
-      
-      <div class="contact-links">
-        <a href="mailto:jctuestaa@gmail.com" class="btn">Email</a>
-        <a href="https://github.com/pascaltll" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://t.me/jc_tuesta" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a href="assets/cv_en.pdf" class="btn btn-accent" download>Download CV (PDF)</a>
-      </div>
-    </div>
+  <header class="header">
+    <h1>Juan Carlos Tuesta Llaja</h1>
+    <p class="role">NLP Researcher & M.Sc. Graduate, MIPT</p>
+    <p class="contact-line">
+      Moscow / Dolgoprudny &bull;
+      <a href="mailto:jctuestaa@gmail.com">jctuestaa@gmail.com</a> &bull;
+      <a href="https://github.com/pascaltll" target="_blank">GitHub</a> &bull;
+      <a href="https://t.me/jc_tuesta" target="_blank">Telegram</a> &bull;
+      <a href="assets/cv_en.pdf" download>CV (PDF)</a>
+    </p>
   </header>
 
-  <main class="container">
-
-    <!-- RESEARCH HIGHLIGHT / CORE PROJECT -->
-    <section class="section">
-      <div class="section-header">
-        <h2>Primary Research Project</h2>
-      </div>
-
-      <article class="research-card">
-        <div class="card-header">
-          <div>
-            <h3>AESOP-RU: Syntactic Paraphrase Auditing Framework</h3>
-            <p class="meta">MIPT & FRC CSC RAS (2024 – 2026) | Supervised by N.V. Chudova, D.A. Devyatkin</p>
-          </div>
-          <span class="pill">Framework</span>
-        </div>
-        
-        <p class="card-desc">
-          Designed and trained <strong>AESOP-RU</strong>, a <code>ru-BART-large</code> architecture fine-tuned with a custom masked-loss objective enforcing SynTagRus dependency-grammar constraints. The system produces fine-grained, syntactically-controlled paraphrases without altering lexical semantics, built on an ~815k-pair corpus.
-        </p>
-
-        <div class="findings-box">
-          <strong>Key Research Finding:</strong> Audited seven frozen classifiers (RUBERT, mBERT, DistilmBERT, RoBERTa, ruGPT-3, GPT-2, OPT). Bidirectional encoders proved robust under syntax degradation, whereas causal autoregressive decoders displayed high sensitivity, showing that syntax causally influences decision boundaries in an architecture-dependent manner.
-        </div>
-
-        <div class="tech-tags">
-          <span>PyTorch</span>
-          <span>ru-BART-large</span>
-          <span>HuggingFace Transformers</span>
-          <span>SpaCy / Stanza</span>
-          <span>SynTagRus</span>
-          <span>Robustness Auditing</span>
-        </div>
-      </article>
+  <main>
+    <!-- ABOUT / BIO -->
+    <section>
+      <h2>About</h2>
+      <p>
+        I am an NLP researcher specializing in <strong>model interpretability</strong>, 
+        <strong>behavioral auditing</strong>, and <strong>syntactic control</strong> of Transformer-based models[cite: 1]. 
+        My master's research focused on causal perturbation frameworks to evaluate 
+        how syntactic shifts affect encoder and decoder decision boundaries in Russian[cite: 1].
+      </p>
     </section>
 
-    <!-- PUBLICATIONS -->
-    <section class="section">
-      <div class="section-header">
-        <h2>Peer-Reviewed Publications</h2>
-      </div>
-
-      <div class="pub-list">
-        <article class="pub-card">
-          <span class="pub-badge oral">Oral Presentation</span>
-          <h3>AESOP-RU: Syntactically-Controlled Paraphrase Generation for Behavioral Auditing of Russian-Language Transformer Classifiers</h3>
-          <p class="pub-authors"><strong>Tuesta Llaja, J.C.</strong>, Chudova, N.V., Devyatkin, D.A.</p>
-          <p class="pub-venue"><em>Studies in Computational Intelligence</em>, Springer. Presented at <strong>Neuroinformatics-2026</strong> (BAK Level-1).</p>
-        </article>
-
-        <article class="pub-card">
-          <span class="pub-badge journal">Journal Paper</span>
-          <h3>Behavioral Auditing of Russian-Language Transformer Classifiers Under Syntactic Masking</h3>
-          <p class="pub-authors"><strong>Tuesta Llaja, J.C.</strong>, et al.</p>
-          <p class="pub-venue"><em>ИТИВС РАН</em>, Issue 4 (BAK Level-3), 2026.</p>
-        </article>
-      </div>
+    <!-- RESEARCH & PUBLICATIONS -->
+    <section>
+      <h2>Research & Publications</h2>
+      <ul class="entry-list">
+        <li>
+          <span class="entry-title">AESOP-RU: Syntactically-Controlled Paraphrase Generation for Behavioral Auditing of Russian-Language Transformer Classifiers</span>[cite: 1]
+          <span class="entry-authors">Tuesta Llaja, J.C., Chudova, N.V., Devyatkin, D.A.</span>[cite: 1]
+          <span class="entry-venue"><em>Studies in Computational Intelligence</em>, Springer. Oral Presentation at <strong>Neuroinformatics-2026</strong>[cite: 1].</span>
+          <p class="entry-desc">
+            ru-BART-large fine-tuned with a custom masked-loss under SynTagRus dependency constraints[cite: 1]. Used to evaluate robustness across 7 frozen architectures (BERT, RoBERTa, GPT, OPT families)[cite: 1].
+          </p>
+        </li>
+        <li>
+          <span class="entry-title">Behavioral auditing of Russian-language Transformer classifiers under syntactic masking</span>[cite: 1]
+          <span class="entry-authors">Tuesta Llaja, J.C., et al.</span>[cite: 1]
+          <span class="entry-venue"><em>ИТИВС РАН</em>, Issue 4, 2026[cite: 1].</span>
+        </li>
+      </ul>
     </section>
 
-    <!-- RESEARCH FOCUS AREAS -->
-    <section class="section">
-      <div class="section-header">
-        <h2>Research Interests</h2>
+    <!-- READING & STUDY LIST -->
+    <section>
+      <h2>Reading & Current Topics</h2>
+      <p class="section-note">Books, foundational papers, and reference material I am currently studying or frequently revisit:</p>
+      
+      <div class="reading-group">
+        <h3>Mechanistic Interpretability & Representation Engineering</h3>
+        <ul class="simple-list">
+          <li><strong>Transformer Circuit Thread</strong> (Elhage et al., Anthropic) — Mathematical framework for reverse-engineering attention heads and induction circuits.</li>
+          <li><strong>Representation Engineering: A Top-Down Approach to AI Transparency</strong> (Zou et al.) — Probing concept vectors and steering LLM activations.</li>
+          <li><strong>Causal Tracing / ROME</strong> (Meng et al.) — Locating and editing factual associations inside autoregressive language models.</li>
+        </ul>
       </div>
 
-      <div class="grid-cards">
-        <div class="mini-card">
-          <h4>LLM Interpretability</h4>
-          <p>Analyzing internal representations, attention dynamics, and causal mechanisms inside Transformer architectures under controlled perturbations.</p>
-        </div>
-        <div class="mini-card">
-          <h4>Adversarial Robustness & Auditing</h4>
-          <p>Black-box and gray-box behavioral evaluation of frozen LLMs against grammar-preserving shifts and out-of-distribution syntactic structures.</p>
-        </div>
-        <div class="mini-card">
-          <h4>Constrained Text Generation</h4>
-          <p>Enforcing explicit syntactic rules, parse-tree alignments, and linguistic invariants during sequence-to-sequence decoding.</p>
-        </div>
+      <div class="reading-group">
+        <h3>Linguistics, Syntax & Parsing</h3>
+        <ul class="simple-list">
+          <li><strong>Dependency Linguistics & SynTagRus Guidelines</strong> — Formal treebanks, dependency-to-constituency conversion, and syntactic parsing pipelines[cite: 1].</li>
+          <li><strong>Speech and Language Processing</strong> (Jurafsky & Martin) — Chapters on Formal Grammars, Syntactic Parsing, and Masked Language Models.</li>
+        </ul>
+      </div>
+
+      <div class="reading-group">
+        <h3>Reference Books & Courses</h3>
+        <ul class="simple-list">
+          <li><strong>Understanding Deep Learning</strong> (Simon J.D. Prince) — Rigorous intuition behind attention mechanisms and optimization dynamics.</li>
+          <li><strong>Stanford CS224N: Natural Language Processing with Deep Learning</strong> — Core foundational references for word vectors to modern Transformers.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- TECHNICAL STACK & EDUCATION -->
-    <section class="section">
-      <div class="section-header">
-        <h2>Skills & Academic Background</h2>
-      </div>
-
-      <div class="dual-columns">
-        <div class="column-block">
-          <h3>Technical Toolkit</h3>
-          <ul class="spec-list">
-            <li><strong>Core NLP / LLMs:</strong> Transformers (BART, BERT, GPT-family), fine-tuning, probing classifiers, dependency parsing, masked language modeling.</li>
-            <li><strong>Frameworks:</strong> PyTorch, HuggingFace (Transformers, Datasets, Accelerate), SpaCy, Stanza[cite: 1].</li>
-            <li><strong>Engineering:</strong> Python, Docker, Git, Asyncio, Playwright, Linux/Bash[cite: 1].</li>
-            <li><strong>Languages:</strong> Spanish (Native), English (Fluent), Russian (Fluent, B2-C1), Portuguese (Fluent)[cite: 1].</li>
-          </ul>
-        </div>
-
-        <div class="column-block">
-          <h3>Education</h3>
-          <div class="edu-item">
-            <h4>M.Sc. in Applied Mathematics & Computer Science</h4>
-            <span class="edu-inst">Moscow Institute of Physics and Technology (MIPT) | 2024 – 2026</span>
-            <p>Specialized in deep learning for natural language processing[cite: 1]. Group М05-4148[cite: 1].</p>
-          </div>
-          <div class="edu-item">
-            <h4>B.Sc. in Computer Science</h4>
-            <span class="edu-inst">Phystech School of Applied Mathematics and Informatics, MIPT | 2019 – 2024</span>
-            <p>English-track program focused on discrete mathematics and algorithms[cite: 1].</p>
-          </div>
-        </div>
-      </div>
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <ul class="entry-list compact">
+        <li>
+          <strong>Moscow Institute of Physics and Technology (MIPT)</strong>[cite: 1]
+          <span class="right-date">2024 &ndash; 2026</span>[cite: 1]
+          <span class="sub">M.Sc. in Applied Mathematics and Computer Science[cite: 1]</span>
+        </li>
+        <li>
+          <strong>Phystech School of Applied Mathematics and Informatics, MIPT</strong>[cite: 1]
+          <span class="right-date">2019 &ndash; 2024</span>[cite: 1]
+          <span class="sub">B.Sc. in Computer Science (English track)[cite: 1]</span>
+        </li>
+      </ul>
     </section>
 
+    <!-- TECHNICAL TOOLKIT -->
+    <section>
+      <h2>Skills</h2>
+      <p>
+        <strong>Models & NLP:</strong> Transformers (BART, BERT, GPT), Probing, Interpretability, Dependency Parsing[cite: 1].<br>
+        <strong>Frameworks & Tools:</strong> Python, PyTorch, HuggingFace, SpaCy, Stanza, Docker, Git, Linux[cite: 1].<br>
+        <strong>Languages:</strong> Spanish (Native), Russian (Fluent, B2-C1), English (Fluent), Portuguese (Fluent)[cite: 1].
+      </p>
+    </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <p>&copy; 2026 Juan Carlos Tuesta Llaja[cite: 1]. Hosted via GitHub Pages.</p>
-      <p class="footer-sub">Updated directly from LaTeX and Git pipeline[cite: 1].</p>
-    </div>
+    <p>&copy; 2026 Juan Carlos Tuesta Llaja &bull; Plain HTML/CSS</p>
   </footer>
 
 </body>
