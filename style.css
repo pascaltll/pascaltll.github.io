@@ -329,3 +329,33 @@ footer {
   font-size: 0.82rem;
   color: var(--text-muted);
 }
+
+/* Nuevas clases para BibTeX y Layout de cabecera de tarjeta */
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.btn-bibtex {
+  background: rgba(110, 118, 129, 0.1);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.btn-bibtex:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+.hidden-bibtex {
+  display: none;
+}

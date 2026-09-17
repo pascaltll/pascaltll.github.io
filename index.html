@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Juan Carlos Tuesta Llaja - NLP & LLM Researcher">
-  <title>Juan Carlos Tuesta Llaja | NLP & LLM Researcher</title>
+  
+  <!-- OpenGraph Meta Tags para Telegram / LinkedIn / Twitter -->
+  <meta property="og:title" content="Juan Carlos Tuesta Llaja | NLP Researcher">
+  <meta property="og:description" content="M.Sc. at MIPT specializing in Transformer interpretability, behavioral auditing, and syntactic control.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://pascaltll.github.io/">
+  
+  <title>Juan Carlos Tuesta Llaja | NLP Researcher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -45,19 +52,6 @@
         <p class="card-desc">
           Designed and trained <strong>AESOP-RU</strong>, a <code>ru-BART-large</code> architecture fine-tuned with a custom masked-loss objective enforcing SynTagRus dependency-grammar constraints. Produces fine-grained syntactic paraphrases without altering lexical semantics across ~815k sentence pairs.
         </p>
-
-        <div class="findings-box">
-          <strong>Key Finding:</strong> Audited seven frozen classifiers (RUBERT, mBERT, DistilmBERT, RoBERTa, ruGPT-3, GPT-2, OPT). Bidirectional encoders remained stable under heavy syntactic disruption, while causal decoders were markedly more sensitive, showing that syntax causally influences decisions in an architecture-dependent way.
-        </div>
-
-        <div class="tech-tags">
-          <span>PyTorch</span>
-          <span>ru-BART-large</span>
-          <span>Transformers</span>
-          <span>SpaCy / Stanza</span>
-          <span>SynTagRus</span>
-          <span>Model Auditing</span>
-        </div>
       </article>
     </section>
 
@@ -69,82 +63,74 @@
 
       <div class="card-stack">
         <article class="card">
-          <span class="badge badge-oral">Oral Presentation</span>
+          <div class="card-header-flex">
+            <span class="badge badge-oral">Oral Presentation</span>
+            <button class="btn-bibtex" onclick="copyBibtex('bib1', this)">Cite (BibTeX)</button>
+          </div>
           <h3>AESOP-RU: Syntactically-Controlled Paraphrase Generation for Behavioral Auditing of Russian-Language Transformer Classifiers</h3>
           <p class="pub-authors">Tuesta Llaja, J.C., Chudova, N.V., Devyatkin, D.A.</p>
           <p class="pub-venue"><em>Studies in Computational Intelligence</em>, Springer. Presented at <strong>Neuroinformatics-2026</strong>.</p>
+          
+          <pre id="bib1" class="hidden-bibtex">@inproceedings{tuesta2026aesop,
+  title={AESOP-RU: Syntactically-Controlled Paraphrase Generation for Behavioral Auditing of Russian-Language Transformer Classifiers},
+  author={Tuesta Llaja, J.C. and Chudova, N.V. and Devyatkin, D.A.},
+  booktitle={Studies in Computational Intelligence},
+  year={2026},
+  publisher={Springer},
+  note={Oral Presentation, Neuroinformatics-2026}
+}</pre>
         </article>
 
         <article class="card">
-          <span class="badge badge-journal">Journal Paper</span>
+          <div class="card-header-flex">
+            <span class="badge badge-journal">Journal Paper</span>
+            <button class="btn-bibtex" onclick="copyBibtex('bib2', this)">Cite (BibTeX)</button>
+          </div>
           <h3>Behavioral Auditing of Russian-Language Transformer Classifiers Under Syntactic Masking</h3>
           <p class="pub-authors">Tuesta Llaja, J.C., et al.</p>
           <p class="pub-venue"><em>ИТИВС РАН</em>, Issue 4, 2026.</p>
+          
+          <pre id="bib2" class="hidden-bibtex">@article{tuesta2026behavioral,
+  title={Behavioral auditing of Russian-language Transformer classifiers under syntactic masking},
+  author={Tuesta Llaja, J.C. and others},
+  journal={ИТИВС РАН},
+  number={4},
+  year={2026}
+}</pre>
         </article>
       </div>
     </section>
 
-    <!-- READING & STUDY LIST -->
+    <!-- RESEARCH NOTES & MATERIALS -->
     <section class="section">
       <div class="section-header">
-        <h2>Reading & Current Topics</h2>
+        <h2>Research Notes & Materials</h2>
       </div>
 
       <div class="grid-3">
         <div class="card">
-          <h4>Interpretability</h4>
+          <h4>Current Research Ideas</h4>
+          <p class="card-desc" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Drafts and hypotheses I am currently exploring in my local lab setup:</p>
+          <ul class="clean-list">
+            <li>Mapping causal pathways of syntax reliance in causal decoders versus masked encoders.</li>
+            <li>Adversarial grammar perturbations using freezing techniques on early Transformer layers.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Core Study Stack</h4>
           <ul class="clean-list">
             <li><strong>Transformer Circuit Thread</strong> (Anthropic) — Reverse-engineering induction circuits.</li>
             <li><strong>Representation Engineering</strong> (Zou et al.) — Concept vectors and activation steering.</li>
-            <li><strong>Causal Tracing / ROME</strong> (Meng et al.) — Locating factual associations in autoregressive LLMs.</li>
+            <li><strong>SynTagRus Guidelines</strong> — Formal Russian dependency treebanks.</li>
           </ul>
         </div>
 
         <div class="card">
-          <h4>Syntax & Grammars</h4>
+          <h4>Suggested Reading</h4>
           <ul class="clean-list">
-            <li><strong>SynTagRus Guidelines</strong> — Formal Russian dependency treebanks and conversion pipelines.</li>
-            <li><strong>Speech and Language Processing</strong> (Jurafsky & Martin) — Formal grammars and syntactic parsing.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h4>Foundations</h4>
-          <ul class="clean-list">
-            <li><strong>Understanding Deep Learning</strong> (Prince) — Attention mechanics and optimization loss dynamics.</li>
-            <li><strong>Stanford CS224N</strong> — Foundational deep NLP architectures and probing methods.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION & SKILLS -->
-    <section class="section">
-      <div class="section-header">
-        <h2>Background & Skills</h2>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>Education</h3>
-          <div class="edu-entry">
-            <strong>M.Sc. in Applied Mathematics & Computer Science</strong>
-            <span class="edu-meta">MIPT &bull; 2024 – 2026</span>
-            <p>Focus on Transformer interpretability and NLP auditing.</p>
-          </div>
-          <div class="edu-entry" style="margin-top: 1rem;">
-            <strong>B.Sc. in Computer Science</strong>
-            <span class="edu-meta">Phystech School of Applied Math & CS, MIPT &bull; 2019 – 2024</span>
-            <p>English-track program in algorithms, discrete mathematics, and ML fundamentals.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Technical Stack</h3>
-          <ul class="spec-list">
-            <li><strong>Core ML/NLP:</strong> Transformers (BART, BERT, GPT-family), fine-tuning, model interpretability, dependency parsing.</li>
-            <li><strong>Tools & Frameworks:</strong> Python, PyTorch, HuggingFace, SpaCy, Stanza, Docker, Git, Asyncio.</li>
-            <li><strong>Languages:</strong> Spanish (Native), Russian (Fluent, B2-C1), English (Fluent), Portuguese (Fluent).</li>
+            <li><strong>Understanding Deep Learning</strong> (Prince) — Outstanding intuition for attention dynamics.</li>
+            <li><strong>Speech and Language Processing</strong> (Jurafsky & Martin) — The definitive reference for formal grammars.</li>
           </ul>
         </div>
       </div>
@@ -156,5 +142,21 @@
     <p>&copy; 2026 Juan Carlos Tuesta Llaja &bull; Hosted on GitHub Pages</p>
   </footer>
 
+  <script>
+    function copyBibtex(elementId, btnElement) {
+      const textToCopy = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const originalText = btnElement.innerText;
+        btnElement.innerText = "Copied!";
+        btnElement.style.borderColor = "#3fb950";
+        btnElement.style.color = "#3fb950";
+        setTimeout(() => {
+          btnElement.innerText = originalText;
+          btnElement.style.borderColor = "";
+          btnElement.style.color = "";
+        }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
